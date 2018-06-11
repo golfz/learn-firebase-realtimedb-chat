@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Day 4 : Homework 2</title>
+
+  <!-- 3rd party css \-->
+  <link rel="stylesheet" type="text/css" href="3rd/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="3rd/fa/css/fa-brands.min.css">
+  <link rel="stylesheet" type="text/css" href="3rd/fa/css/fa-regular.min.css">
+  <link rel="stylesheet" type="text/css" href="3rd/fa/css/fa-solid.min.css">
+  <link rel="stylesheet" type="text/css" href="3rd/fa/css/fontawesome.min.css">
+  <link rel="stylesheet" type="text/css" href="3rd/fa/css/fontawesome-all.min.css">
+
+  <!-- 3rd party js -->
+  <script src="3rd/jquery.js"></script>
+  <script src="3rd/popper.min.js"></script>
+  <script src="3rd/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- own css -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <script src="js/util.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDugvOoeLGn8JWeAdYYuPev2XEjmSWpmvU",
+      authDomain: "simplechat-90634.firebaseapp.com",
+      databaseURL: "https://simplechat-90634.firebaseio.com",
+      projectId: "simplechat-90634",
+      storageBucket: "simplechat-90634.appspot.com",
+      messagingSenderId: "142345510780"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+
+  <!-- own js -->
+  <!--  <script src="js/script.js"></script>-->
+
+</head>
+
+<body>
+
+  <div class="container" id="wrap-body-container">
+
+    <div class="row">
+
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header">
+            RECENT CHAT HISTORY
+          </div>
+
+          <!-- chat-history-wrapper -->
+          <div id="chat-history-wrapper" class="card-body">
+
+          </div>
+          <!-- end : chat-history-wrapper -->
+
+          <div id="chat-box" class="card-footer text-muted">
+            <div id="chat-box-pic-wrap">
+              <img src="img/ghost_person.png" class="rounded-circle d-inline-block mw-100 mh-100">
+            </div>
+            <div id="chat-box-text">
+              <p><b>...</b> <button id="btnChangeUser" type="button" class="btn btn-secondary">เปลี่ยนผู้ใช้งาน</button></p>
+              <div class="input-group mb-3">
+                <input id="inputMsg" type="text" class="form-control" placeholder="Type text here." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button id="btnSend" class="btn btn-primary btn-outline-primary" type="button">Send</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">
+            ONLINE USERS
+          </div>
+
+          <!-- chat-history-wrapper -->
+          <div id="online-user-wrapper" class="card-body">
+
+          </div>
+          <!-- end : chat-history-wrapper -->
+
+        </div>
+      </div>
+
+    </div>
+
+    <!--
+<div style="margin-top: 2em">
+  <button id="btnCloseWindow" class="btn btn-danger">Close chat window</button>
+</div>
+-->
+
+  </div>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
